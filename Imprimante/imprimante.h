@@ -26,5 +26,6 @@ private:
     Ui::Imprimante *ui;
     QString tout;
     QString caractere;
+    QString caractere2;
 };
 #endif // IMPRIMANTE_H

@@ -30,6 +30,7 @@ public:
     QTextEdit *txtbraille;
     QPushButton *file;
     QPushButton *convert;
+    QTextEdit *txtcaracbraille;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,31 +38,35 @@ public:
     {
         if (Imprimante->objectName().isEmpty())
             Imprimante->setObjectName("Imprimante");
-        Imprimante->resize(864, 639);
+        Imprimante->resize(1251, 639);
         centralwidget = new QWidget(Imprimante);
         centralwidget->setObjectName("centralwidget");
         acces = new QLineEdit(centralwidget);
         acces->setObjectName("acces");
-        acces->setGeometry(QRect(160, 20, 541, 41));
+        acces->setGeometry(QRect(20, 30, 541, 41));
         acces->setReadOnly(true);
         txttout = new QTextEdit(centralwidget);
         txttout->setObjectName("txttout");
         txttout->setGeometry(QRect(380, 110, 441, 231));
-        txttout->setReadOnly(true);
+        txttout->setReadOnly(false);
         txtbraille = new QTextEdit(centralwidget);
         txtbraille->setObjectName("txtbraille");
-        txtbraille->setGeometry(QRect(380, 360, 441, 231));
+        txtbraille->setGeometry(QRect(150, 350, 441, 231));
         txtbraille->setReadOnly(true);
         file = new QPushButton(centralwidget);
         file->setObjectName("file");
-        file->setGeometry(QRect(70, 220, 81, 71));
+        file->setGeometry(QRect(270, 200, 81, 71));
         convert = new QPushButton(centralwidget);
         convert->setObjectName("convert");
-        convert->setGeometry(QRect(220, 220, 81, 71));
+        convert->setGeometry(QRect(850, 210, 81, 71));
+        txtcaracbraille = new QTextEdit(centralwidget);
+        txtcaracbraille->setObjectName("txtcaracbraille");
+        txtcaracbraille->setGeometry(QRect(600, 350, 441, 231));
+        txtcaracbraille->setReadOnly(true);
         Imprimante->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Imprimante);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 864, 22));
+        menubar->setGeometry(QRect(0, 0, 1251, 22));
         Imprimante->setMenuBar(menubar);
         statusbar = new QStatusBar(Imprimante);
         statusbar->setObjectName("statusbar");

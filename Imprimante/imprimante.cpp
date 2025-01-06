@@ -214,14 +214,213 @@ void Imprimante::on_convert_clicked()
 
 
             case 0x00e9: // é
-                caractere.append("é");
+                caractere.append("00111111");
                 break;
+            case 0x00e8: // è
+                caractere.append("00111111");
+                break;
+
             default:
                 caractere.append(" ");
+
         }
 
 
     }
     ui->txtbraille->setText(caractere);
+
+
+
+
+    QChar braille2;
+    for(int i = 0; i < tout.length(); i++)
+    {
+        //https://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode_(0000-0FFF)
+        switch(tout[i].unicode())
+        {
+
+        //alphabet minuscule
+        case 'a':
+            caractere2.append("⠁");
+            break;
+        case 'b':
+            caractere2.append("⠃");
+            break;
+        case 'c':
+            caractere2.append("⠉");
+            break;
+        case 'd':
+            caractere2.append("⠙");
+            break;
+        case 'e':
+            caractere2.append("⠑");
+            break;
+        case 'f':
+            caractere2.append("⠋");
+            break;
+        case 'g':
+            caractere2.append("⠛");
+            break;
+        case 'h':
+            caractere2.append("⠓");
+            break;
+        case 'i':
+            caractere2.append("⠊");
+            break;
+        case 'j':
+            caractere2.append("⠚");
+            break;
+        case 'k':
+            caractere2.append("⠅");
+            break;
+        case 'l':
+            caractere2.append("⠇");
+            break;
+        case 'm':
+            caractere2.append("⠍");
+            break;
+        case 'n':
+            caractere2.append("⠝");
+            break;
+        case 'o':
+            caractere2.append("⠕");
+            break;
+        case 'p':
+            caractere2.append("⠏");
+            break;
+        case 'q':
+            caractere2.append("⠟");
+            break;
+        case 'r':
+            caractere2.append("⠗");
+            break;
+        case 's':
+            caractere2.append("⠎");
+            break;
+        case 't':
+            caractere2.append("⠞");
+            break;
+        case 'u':
+            caractere2.append("⠥");
+            break;
+        case 'v':
+            caractere2.append("⠧");
+            break;
+        case 'w':
+            caractere2.append("⠺");
+            break;
+        case 'x':
+            caractere2.append("⠭");
+            break;
+        case 'y':
+            caractere2.append("⠽");
+            break;
+        case 'z':
+            caractere2.append("⠵");
+            break;
+
+
+
+
+            //alphabet Majuscule
+        case 'A':
+            caractere2.append("⠨⠁");
+            break;
+        case 'B':
+            caractere2.append("⠨⠃");
+            break;
+        case 'C':
+            caractere2.append("⠨⠉");
+            break;
+        case 'D':
+            caractere2.append("⠨⠙");
+            break;
+        case 'E':
+            caractere2.append("⠨⠑");
+            break;
+        case 'F':
+            caractere2.append("⠨⠋");
+            break;
+        case 'G':
+            caractere2.append("⠨⠛");
+            break;
+        case 'H':
+            caractere2.append("⠨⠓");
+            break;
+        case 'I':
+            caractere2.append("⠨⠊");
+            break;
+        case 'J':
+            caractere2.append("⠨⠚");
+            break;
+        case 'K':
+            caractere2.append("⠨⠚");
+            break;
+        case 'L':
+            caractere2.append("⠨⠇");
+            break;
+        case 'M':
+            caractere2.append("⠨⠍");
+            break;
+        case 'N':
+            caractere2.append("⠨⠝");
+            break;
+        case 'O':
+            caractere2.append("⠨⠕");
+            break;
+        case 'P':
+            caractere2.append("⠨⠏");
+            break;
+        case 'Q':
+            caractere2.append("⠨⠟");
+            break;
+        case 'R':
+            caractere2.append("⠨⠗");
+            break;
+        case 'S':
+            caractere2.append("⠨⠎");
+            break;
+        case 'T':
+            caractere2.append("⠨⠞");
+            break;
+        case 'U':
+            caractere2.append("⠨⠥");
+            break;
+        case 'V':
+            caractere2.append("⠨⠧");
+            break;
+        case 'W':
+            caractere2.append("⠨⠺");
+            break;
+        case 'X':
+            caractere2.append("⠨⠭");
+            break;
+        case 'Y':
+            caractere2.append("⠨⠽");
+            break;
+        case 'Z':
+            caractere2.append("⠨⠵");
+            break;
+
+
+
+
+
+
+        case 0x00e9: // é
+            caractere2.append("⠿");
+            break;
+        case 0x00e8: // è
+            caractere2.append("⠮");
+            break;
+
+        default:
+            caractere2.append(" ");
+
+        }
+
+
+    }
+    ui->txtcaracbraille->setText(caractere2);
 }
 
