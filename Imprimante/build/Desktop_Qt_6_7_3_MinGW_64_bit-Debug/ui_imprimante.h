@@ -31,6 +31,7 @@ public:
     QPushButton *file;
     QPushButton *convert;
     QTextEdit *txtcaracbraille;
+    QPushButton *envoie;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -47,22 +48,25 @@ public:
         acces->setReadOnly(true);
         txttout = new QTextEdit(centralwidget);
         txttout->setObjectName("txttout");
-        txttout->setGeometry(QRect(380, 110, 441, 231));
+        txttout->setGeometry(QRect(20, 170, 441, 231));
         txttout->setReadOnly(false);
         txtbraille = new QTextEdit(centralwidget);
         txtbraille->setObjectName("txtbraille");
-        txtbraille->setGeometry(QRect(150, 350, 441, 231));
+        txtbraille->setGeometry(QRect(620, 300, 441, 231));
         txtbraille->setReadOnly(true);
         file = new QPushButton(centralwidget);
         file->setObjectName("file");
-        file->setGeometry(QRect(270, 200, 81, 71));
+        file->setGeometry(QRect(20, 90, 81, 71));
         convert = new QPushButton(centralwidget);
         convert->setObjectName("convert");
-        convert->setGeometry(QRect(850, 210, 81, 71));
+        convert->setGeometry(QRect(470, 250, 141, 71));
         txtcaracbraille = new QTextEdit(centralwidget);
         txtcaracbraille->setObjectName("txtcaracbraille");
-        txtcaracbraille->setGeometry(QRect(600, 350, 441, 231));
+        txtcaracbraille->setGeometry(QRect(620, 60, 441, 231));
         txtcaracbraille->setReadOnly(true);
+        envoie = new QPushButton(centralwidget);
+        envoie->setObjectName("envoie");
+        envoie->setGeometry(QRect(1070, 260, 161, 71));
         Imprimante->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Imprimante);
         menubar->setObjectName("menubar");
@@ -80,8 +84,9 @@ public:
     void retranslateUi(QMainWindow *Imprimante)
     {
         Imprimante->setWindowTitle(QCoreApplication::translate("Imprimante", "Imprimante", nullptr));
-        file->setText(QCoreApplication::translate("Imprimante", "Fichier", nullptr));
-        convert->setText(QCoreApplication::translate("Imprimante", "Convert", nullptr));
+        file->setText(QCoreApplication::translate("Imprimante", "lire un fichier", nullptr));
+        convert->setText(QCoreApplication::translate("Imprimante", "Convertir en braille", nullptr));
+        envoie->setText(QCoreApplication::translate("Imprimante", "envoy\303\251 le fichier", nullptr));
     } // retranslateUi
 
 };

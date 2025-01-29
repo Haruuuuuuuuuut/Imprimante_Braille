@@ -30,8 +30,8 @@
    <widget class="QTextEdit" name="txttout">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>110</y>
+      <x>20</x>
+      <y>170</y>
       <width>441</width>
       <height>231</height>
      </rect>
@@ -43,8 +43,8 @@
    <widget class="QTextEdit" name="txtbraille">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>350</y>
+      <x>620</x>
+      <y>300</y>
       <width>441</width>
       <height>231</height>
      </rect>
@@ -56,40 +56,53 @@
    <widget class="QPushButton" name="file">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>200</y>
+      <x>20</x>
+      <y>90</y>
       <width>81</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Fichier</string>
+     <string>lire un fichier</string>
     </property>
    </widget>
    <widget class="QPushButton" name="convert">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>210</y>
-      <width>81</width>
+      <x>470</x>
+      <y>250</y>
+      <width>141</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Convert</string>
+     <string>Convertir en braille</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="txtcaracbraille">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>350</y>
+      <x>620</x>
+      <y>60</y>
       <width>441</width>
       <height>231</height>
      </rect>
     </property>
     <property name="readOnly">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="envoie">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>260</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>envoyé le fichier</string>
     </property>
    </widget>
   </widget>
