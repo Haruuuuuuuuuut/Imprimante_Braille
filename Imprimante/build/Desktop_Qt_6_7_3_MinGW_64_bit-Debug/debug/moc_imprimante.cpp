@@ -39,7 +39,7 @@ constexpr auto qt_meta_stringdata_CLASSImprimanteENDCLASS = QtMocHelpers::string
     "on_file_clicked",
     "",
     "on_convert_clicked",
-    "on_envoie_clicked"
+    "Read_Data"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -85,7 +85,7 @@ Q_CONSTINIT const QMetaObject Imprimante::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_convert_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_envoie_clicked'
+        // method 'Read_Data'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -99,7 +99,7 @@ void Imprimante::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_file_clicked(); break;
         case 1: _t->on_convert_clicked(); break;
-        case 2: _t->on_envoie_clicked(); break;
+        case 2: _t->Read_Data(); break;
         default: ;
         }
     }
